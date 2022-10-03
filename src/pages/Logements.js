@@ -3,13 +3,15 @@ import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logementsData from "../data/logementsData.json";
+import StarRating from "../components/StarRating";
+import Carousel from "../components/Carousel";
 
 const Logements = () => {
   const { id } = useParams();
   const logement = logementsData.find((lgmt) => lgmt.id === id);
   let equipements = logement.equipments;
   let tags = logement.tags;
-  console.log(tags);
+
   return (
     <div>
       <Header />
@@ -28,7 +30,6 @@ const Logements = () => {
             <p>{logement.location}</p>
             <div className="tags-list listing">
               {tags.map((tag) => {
-                console.log(tag);
                 return (
                   <span className="badge" key={tag}>
                     {tag}
@@ -45,6 +46,9 @@ const Logements = () => {
                 src={logement.host.picture}
                 alt=""
               />
+            </div>
+            <div>
+              <StarRating rating={logement.rating}></StarRating>
             </div>
           </div>
         </div>
@@ -99,7 +103,6 @@ const Logements = () => {
                   <div className="accordion-body accordion-logement">
                     <ul className="equipment-list listing">
                       {equipements.map((eqpt) => {
-                        console.log(eqpt);
                         return <li key={eqpt}>{eqpt}</li>;
                       })}
                     </ul>
