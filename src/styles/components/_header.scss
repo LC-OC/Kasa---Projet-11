@@ -1,0 +1,12 @@
+.nav_link {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 24px;
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+    &:active {
+        text-decoration: underline;
+    }
+}

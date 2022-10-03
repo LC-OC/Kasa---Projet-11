@@ -1,0 +1,76 @@
+.body {
+    margin: auto;
+    
+}
+.informations {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    color: $primary-color;
+    .title {
+        width: 635px;
+    }
+    .profil {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        .name-host {
+            font-size: 18px;
+            width: 93px;
+            text-align: center;
+        }
+        .profil-picture {
+            height: 100px;
+        }
+    }
+    
+    .badge {
+        background-color: $primary-color;
+        margin-right: 1rem;
+        border-radius: 10px;
+        padding: 0.5rem 2rem;
+        font-size: 14px;
+        font-weight: lighter;
+
+    }
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    .description-container {
+        width: 560px;
+    }
+    .accordion-item {
+        width: 560px;
+    }
+    .equipement-container {
+        width: 560px;
+    }
+    .accordion-collapse {
+        width: 560px;
+    }
+    .accordion-button  {
+        font-size: 18px;
+        width: 560px;
+    }
+    .accordion-logement   {
+        width: 560px;
+        font-size: 18px;
+        padding: 2rem 1rem;
+    }
+    .listing {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.banner {
+    height: 415px;
+    object-fit: cover;
+}
