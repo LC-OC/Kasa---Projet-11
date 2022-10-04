@@ -16,13 +16,10 @@ const Logements = () => {
     <div>
       <Header />
       <div className="body">
-        <div className="img-container text-center">
-          <img
-            className="rounded w-75 mt-3 mb-3 banner"
-            src={logement.cover}
-            alt={logement.title}
-          />
-        </div>
+        <Carousel
+          pictures={logement.pictures}
+          title={logement.title}
+        ></Carousel>
 
         <div className="informations w-75">
           <div className="left-part">
@@ -47,9 +44,7 @@ const Logements = () => {
                 alt=""
               />
             </div>
-            <div>
-              <StarRating rating={logement.rating}></StarRating>
-            </div>
+            <StarRating rating={logement.rating}></StarRating>
           </div>
         </div>
         <div className="accordion-container w-75">

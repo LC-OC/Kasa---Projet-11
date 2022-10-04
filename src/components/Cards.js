@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import black_radient from "../assets/black_radient.png";
+import logementsData from "../data/logementsData.json";
 
 const Cards = () => {
-  const [logements, setLogements] = useState([]);
-  useEffect(() => {
-    const fetch = async () => {
-      try {
-        const { data } = await axios.get("/logementsData.json");
-        setLogements(data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetch();
-  }, []);
+  const [logements] = useState(logementsData);
+
   return (
     <div className="cards-home w-75">
       {logements.map((logement) => {
@@ -27,7 +18,14 @@ const Cards = () => {
             }}
           >
             <div key={logement.id} className="card text-white card-home">
-              <img className="card-img" src={logement.cover} alt="" />
+              <img
+                style={{
+                  backgroundImage: `url(${logement.cover})`,
+                }}
+                className="card-img"
+                src={black_radient}
+                alt=""
+              />
               <div className="card-img-overlay">
                 <h5 className="card-title">{logement.title}</h5>
               </div>

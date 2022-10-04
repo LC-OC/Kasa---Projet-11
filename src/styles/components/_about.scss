@@ -1,4 +1,4 @@
-.accordion {
+.accordion-about {
     margin: auto;
     width: 1023px;
     .accordion-item {
@@ -11,7 +11,7 @@
         border-radius: 5px;
         height: 47px;
     }
-    .accordion-body {
+    .accordion-body-about {
         background-color: #F6F6F6;
         color:  $primary-color;
         text-align: justify;
@@ -25,4 +25,9 @@
         border-color: none;
         box-shadow: none;
       }
+}
+
+.banner-about {
+    border-radius: 25px;
+    height: 223px;
 }

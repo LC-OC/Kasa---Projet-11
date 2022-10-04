@@ -2,11 +2,20 @@
     text-decoration: none;
     color: $primary-color;
     font-size: 24px;
-    &:hover {
-        color: black;
-        text-decoration: underline;
+    li {
+        margin: 1rem;
     }
-    &:active {
-        text-decoration: underline;
+    :hover {
+        color: $primary-color;
     }
 }
+
+.inactive {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.active {
+    color: $primary-color;
+    text-decoration: underline;
+   }

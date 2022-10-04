@@ -8,8 +8,11 @@ const About = () => {
     <div>
       <Header />
       <div className="text-center ">
-        <img className="rounded w-75 mt-3 mb-3" src={img_about} alt="" />
-        <div className="accordion" id="accordionPanelsStayOpenExample">
+        <img className="banner-about w-75 mt-3 mb-3" src={img_about} alt="" />
+        <div
+          className="accordion accordion-about"
+          id="accordionPanelsStayOpenExample"
+        >
           <div className="accordion-item">
             <h2 className="accordion-header" id="panelsStayOpen-headingOne">
               <button
@@ -28,7 +31,7 @@ const About = () => {
               className="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingOne"
             >
-              <div className="accordion-body">
+              <div className="accordion-body accordion-body-about">
                 Les annonces postées sur Kasa garantissent une fiabilité totale.
                 Les photos sont conformes aux logements, et toutes les
                 informations sont régulièrement vérifiées par nos équipes.
@@ -53,7 +56,7 @@ const About = () => {
               className="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingTwo"
             >
-              <div className="accordion-body">
+              <div className="accordion-body accordion-body-about">
                 La bienveillance fait partie des valeurs fondatrices de Kasa.
                 Tout comportement discriminatoire ou de perturbation du
                 voisinage entraînera une exclusion de notre plateforme.
@@ -78,7 +81,7 @@ const About = () => {
               className="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingThree"
             >
-              <div className="accordion-body">
+              <div className="accordion-body accordion-body-about">
                 Nos équipes se tiennent à votre disposition pour vous fournir
                 une expérience parfaite. N'hésitez pas à nous contacter si vous
                 avez la moindre question.
@@ -103,7 +106,7 @@ const About = () => {
               className="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingFour"
             >
-              <div className="accordion-body">
+              <div className="accordion-body accordion-body-about">
                 La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes
                 que pour les voyageurs, chaque logement correspond aux critères
                 de sécurité établis par nos services. En laissant une note aussi

@@ -1,64 +1,64 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import left_arrow from "../assets/left_arrow.svg";
+import right_arrow from "../assets/right_arrow.svg";
 
-const Carousel = ({ pictures }) => {
-  let picturesArray = pictures.pictures;
+const Carousel = ({ pictures, title }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideLength = pictures.length;
+
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+    console.log("next");
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
+    console.log("prev");
+  };
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, []);
+
+  if (slideLength === 1) {
+    return (
+      <div className="img-container text-center">
+        <img
+          className="rounded w-75 mt-3 mb-3 banner"
+          src={pictures}
+          alt={title}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div
-      id="carouselExampleIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          {picturesArray.map((e) => {
-            return (
-              <div key={e} className="carousel-item active">
-                <img key={e} src={e} className="d-block w-100" alt={e} />
+    <div className="slider w-75  mb-5">
+      <img src={left_arrow} className="arrow prev" onClick={prevSlide} alt="" />
+      <img
+        src={right_arrow}
+        className="arrow next"
+        onClick={nextSlide}
+        alt=""
+      />
+      {pictures.map((slide, index) => {
+        return (
+          <div
+            className={index === currentSlide ? "slide current" : "slide"}
+            key={index}
+          >
+            {index === currentSlide && (
+              <div>
+                <img src={slide} alt={title} className="image" />
               </div>
-            );
-          })}
-        </div>
-      </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+            )}
+            <p className="slide_lenght">
+              {index + 1}/{slideLength}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
 };

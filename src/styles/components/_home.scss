@@ -30,21 +30,21 @@
     .card-home {
     width: 340px;
     height: 340px;
-    //background-image: url(../../../public/background-gradient.png);
+    background-position: center;
     margin: 1rem;
     .card-img {
         object-fit: cover;
         width: 340px;
         height: 340px;
+        background-position: center;
 
     }
     .card-title {
         position: absolute;
         bottom: 0;
-        background: rgba(0,0,0,.5);
         left: 0;
         font-size: 18px;
-        width: 9rem;
+        width: 12rem;
         text-align: initial;
         margin: 1rem;
         padding: 0.5rem;
