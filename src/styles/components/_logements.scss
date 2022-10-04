@@ -38,46 +38,6 @@
     }
 }
 
-.accordion-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   margin: 20px auto 20px; 
-    .accordion-button {
-        background-color: $primary-color;
-        color: white;
-        font-size: 18px;
-        border-radius: 5px;
-        height: 47px;
-        width: 560px;
-    }
-    .accordion-button:after {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-      }
-      .accordion-button:focus {
-        border-color: none;
-        box-shadow: none;
-      }
-    .accordion-logement   {
-        width: 560px;
-        font-size: 18px;
-        padding: 2rem 1rem;
-        height: 249px;
-    }
-    .listing {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    .accordion-body {
-        background-color: #F6F6F6;
-        color:  $primary-color;
-        text-align: justify;
-        font-size: 18px;
-        
-    }
-}
-
 .banner {
     height: 415px;
     object-fit: cover;
