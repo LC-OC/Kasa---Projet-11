@@ -5,8 +5,10 @@
     background-color: #F6F6F6;
     border-radius: 25px;
     padding: 2rem 0.5rem;
+    width: 1240px;
     @media #{$mobile} {
         flex-direction: column;
+        width: 80%;
         flex-wrap: nowrap;
         align-items: center;
         background-color: white;
@@ -17,10 +19,11 @@
     width: 340px;
     height: 340px;
     background-position: center;
-    margin: 1rem;
+    margin: 1rem 2rem;
     @media #{$mobile} {
         height: 255px;
         width: 335px;
+        margin: 0;
         margin-bottom: 1rem;
     }
     .card-img {

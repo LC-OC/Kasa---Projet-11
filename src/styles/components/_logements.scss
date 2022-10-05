@@ -18,6 +18,7 @@
         @media #{$mobile} {
             font-size: 18px;
             width: 335px;
+            font-weight: 500;
         }
     }
     .location {
@@ -72,9 +73,12 @@
     }
 
     .right-part {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        @media #{$mobile} {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 

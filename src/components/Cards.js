@@ -7,7 +7,7 @@ const Cards = () => {
   const [logements] = useState(logementsData);
 
   return (
-    <div className="cards-home w-75">
+    <div className="cards-home">
       {logements.map((logement) => {
         return (
           <Link

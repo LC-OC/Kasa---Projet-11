@@ -19,13 +19,6 @@ const Carousel = ({ pictures, title }) => {
     setCurrentSlide(0);
   }, []);
 
-  if (
-    currentSlide.src ===
-    "https://pbs.twimg.com/media/FeTd2k7WYAEHXVd?format=jpg&name=large"
-  ) {
-    console.log("test");
-  }
-
   if (slideLength === 1) {
     return (
       <div className="img-container text-center">
@@ -35,7 +28,7 @@ const Carousel = ({ pictures, title }) => {
   }
 
   return (
-    <div className="slider  mb-5">
+    <div className="slider">
       <img src={left_arrow} className="arrow prev" onClick={prevSlide} alt="" />
       <img
         src={right_arrow}
