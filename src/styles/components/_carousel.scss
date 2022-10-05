@@ -6,7 +6,7 @@
   border-radius: 25px;
   width: 80%;
   @media #{$mobile} {
-    width: 85%;
+    width: 335px;
     height: 255px;
 }
 }
@@ -23,6 +23,10 @@
   display:flex;
   align-items: center;
   border-radius: 25px;
+  @media #{$mobile} {
+    align-items: initial;
+    width: 335px;
+  }
   
   .slide_lenght {
       color: #FFFFFF;
@@ -50,7 +54,21 @@
   height: 100%;
   align-self: center;
   @media #{$mobile} {
+    width: 335px;
+    height: 255px;
+    object-position:  cover;
   }
+}
+
+@-moz-document url-prefix() {
+  .slide img {
+  @media #{$mobile} {
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    object-position:  cover;
+  }
+}
 }
 
 .current {

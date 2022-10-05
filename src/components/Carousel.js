@@ -19,6 +19,13 @@ const Carousel = ({ pictures, title }) => {
     setCurrentSlide(0);
   }, []);
 
+  if (
+    currentSlide.src ===
+    "https://pbs.twimg.com/media/FeTd2k7WYAEHXVd?format=jpg&name=large"
+  ) {
+    console.log("test");
+  }
+
   if (slideLength === 1) {
     return (
       <div className="img-container text-center">
