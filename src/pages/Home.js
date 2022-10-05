@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Header />
       <div className="text-center">
-        <div className="banner_home w-75 mt-3 mb-3">
+        <div className="banner_home mt-3 mb-3">
           <div className="w-100 background-dark"></div>
           <p className="banner-p">Chez vous, partout et ailleurs</p>
         </div>

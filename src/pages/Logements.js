@@ -25,7 +25,7 @@ const Logements = () => {
         <div className="informations w-75">
           <div className="left-part">
             <h1 className="title">{logement.title}</h1>
-            <p>{logement.location}</p>
+            <p className="location">{logement.location}</p>
             <Tags tags={logement.tags} />
           </div>
           <div className="right-part">

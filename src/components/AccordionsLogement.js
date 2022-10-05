@@ -2,7 +2,7 @@ import React from "react";
 
 const AccordionsLogement = ({ equipements, description }) => {
   return (
-    <div className="accordion-container w-75">
+    <div className="accordion-container">
       <div className="description-container">
         <div className="accordion  description">
           <div className="accordion-item">

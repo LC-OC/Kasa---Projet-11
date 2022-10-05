@@ -2,6 +2,9 @@
     background-color: #000000;
     height: 209px;
     padding: 4rem;
+    @media #{$mobile} {
+        font-size: 12px;
+    }
     .logo-footer {
         size: 39.44px;
     }

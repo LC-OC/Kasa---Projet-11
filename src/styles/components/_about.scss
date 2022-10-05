@@ -1,4 +1,15 @@
+
 .banner-about {
     border-radius: 25px;
     height: 223px;
+    width: 1240px;
+    margin: auto;
+    background-image: url(../../assets/img_about.png);
+    @media #{$mobile} {
+        height: 223px;
+        width: 336px;
+        background-image: url(../../assets/img_about_mobile.png);
+        
+    }
+    
 }

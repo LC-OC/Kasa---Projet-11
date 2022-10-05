@@ -22,17 +22,13 @@ const Carousel = ({ pictures, title }) => {
   if (slideLength === 1) {
     return (
       <div className="img-container text-center">
-        <img
-          className="rounded w-75 mt-3 mb-3 banner"
-          src={pictures}
-          alt={title}
-        />
+        <img className="rounded mt-3 mb-3 banner" src={pictures} alt={title} />
       </div>
     );
   }
 
   return (
-    <div className="slider w-75  mb-5">
+    <div className="slider  mb-5">
       <img src={left_arrow} className="arrow prev" onClick={prevSlide} alt="" />
       <img
         src={right_arrow}

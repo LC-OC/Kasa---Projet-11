@@ -5,16 +5,33 @@
     background-color: #F6F6F6;
     border-radius: 25px;
     padding: 2rem 0.5rem;
+    @media #{$mobile} {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        background-color: white;
+        padding: 0;
+
+    }
     .card-home {
     width: 340px;
     height: 340px;
     background-position: center;
     margin: 1rem;
+    @media #{$mobile} {
+        height: 255px;
+        width: 335px;
+        margin-bottom: 1rem;
+    }
     .card-img {
         object-fit: cover;
         width: 340px;
         height: 340px;
         background-position: center;
+        @media #{$mobile} {
+            height: 255px;
+            width: 335px;
+        }
 
     }
     .card-title {

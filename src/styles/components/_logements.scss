@@ -8,8 +8,20 @@
     justify-content: space-between;
     margin: auto;
     color: $primary-color;
+    @media #{$mobile} {
+        flex-direction: column;
+      }
     .title {
         width: 635px;
+        @media #{$mobile} {
+            font-size: 18px;
+            width: 335px;
+        }
+    }
+    .location {
+        @media #{$mobile} {
+            font-size: 14px;
+        }
     }
     .profil {
         display: flex;
@@ -20,10 +32,19 @@
             width: 93px;
             text-align: right;
             margin-right: 0.5rem;
+            @media #{$mobile} {
+                font-size: 12px;
+                width: 60px;
+                margin-right: 0.6rem;
+            }
         }
         .profil-picture {
             height: 80px;
             width: 80px;
+            @media #{$mobile} {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
     
@@ -34,11 +55,28 @@
         padding: 0.5rem 2rem;
         font-size: 14px;
         font-weight: lighter;
+        @media #{$mobile} {
+            width: 105px;
+            font-size: 10px;
+            padding: 0.4rem 0;
 
+        }
+
+    }
+
+    .right-part {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 }
 
 .banner {
     height: 415px;
     object-fit: cover;
+    width: 80%;
+    @media #{$mobile} {
+        width: 85%;
+        height: 255px;
+    }
 }

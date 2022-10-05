@@ -2,20 +2,40 @@
     text-decoration: none;
     color: $primary-color;
     font-size: 24px;
+    @media #{$mobile} {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+    }
     li {
         margin: 1rem;
+        @media #{$mobile} {
+            margin: 0.4rem;
+        }
     }
     :hover {
         color: $primary-color;
     }
-}
-
-.inactive {
+    .inactive {
     color: $primary-color;
     text-decoration: none;
+    }
+    .active {
+        color: $primary-color;
+        text-decoration: underline;
+    }
 }
 
-.active {
-    color: $primary-color;
-    text-decoration: underline;
-   }
+.logo {
+    height: 68px;
+    @media #{$mobile} {
+        height: 47px;
+    }
+}
+
+.header-container{
+    width: 80%;
+    @media #{$mobile} {
+        width: 85%;
+    }
+}

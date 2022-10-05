@@ -4,6 +4,11 @@
     overflow: hidden;
     margin: auto;
     border-radius: 25px;
+    width: 80%;
+    @media #{$mobile} {
+      width: 85%;
+      height: 255px;
+  }
   }
   
   .slide {
@@ -18,6 +23,7 @@
     display:flex;
     align-items: center;
     border-radius: 25px;
+    align-items: initial;
     .slide_lenght {
         color: #FFFFFF;
         size: 18px;
@@ -43,6 +49,10 @@
   .slide img {
     height: 100%;
     align-self: center;
+    @media #{$mobile} {
+      object-fit: cover;
+      width: 100%;
+  }
     
   }
   
@@ -60,15 +70,28 @@
     width: 46.68px;
     position: absolute;
     z-index: 999;
+    @media #{$mobile} {
+      width: 11.67px;
+      height: 19.8px;
+  }
   }
   
   .next {
     top: 35%;
     right: 1.5rem;
+    @media #{$mobile} {
+      top: 45%;
+      right: 0.5rem;
+    }
   }
+  
   .prev {
     top: 35%;
     left: 1.5rem;
+    @media #{$mobile} {
+      top: 45%;
+      left: 0.5rem;
+    }
   }
 
   

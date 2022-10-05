@@ -1,7 +1,10 @@
 .rating {
     margin-top: 1rem;
     text-align: right;
-    .star {
+    .star_icon {
         height: 30px;
+        @media #{$mobile} {
+            height: 15px;
+        }
     }
 }
