@@ -22,7 +22,7 @@ const Logements = () => {
           title={logement.title}
         ></Carousel>
 
-        <div className="informations w-75">
+        <div className="informations">
           <div className="left-part">
             <h1 className="title">{logement.title}</h1>
             <p className="location">{logement.location}</p>

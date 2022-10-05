@@ -7,9 +7,11 @@
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
+    width: 80%;
     color: $primary-color;
     @media #{$mobile} {
         flex-direction: column;
+        width: 85%;
       }
     .title {
         width: 635px;
@@ -27,6 +29,9 @@
         display: flex;
         align-items: center;
         justify-content: right;
+        @media #{$mobile} {
+            margin-top: 1rem;
+        }
         .name-host {
             font-size: 18px;
             width: 93px;
@@ -46,8 +51,8 @@
                 height: 50px;
             }
         }
-    }
     
+    }
     .badge {
         background-color: $primary-color;
         margin-right: 1rem;
@@ -56,9 +61,11 @@
         font-size: 14px;
         font-weight: lighter;
         @media #{$mobile} {
-            width: 105px;
+            width: 95px;
             font-size: 10px;
-            padding: 0.4rem 0;
+            padding: 0.3rem 0;
+            border-radius: 5px;
+            margin-right: 0.5rem;
 
         }
 

@@ -5,9 +5,10 @@
     width: 80%;
     flex-direction: row;
     justify-content: space-between;
-   margin: 20px auto 20px; 
+   margin: 20px auto 3rem; 
    @media #{$mobile} {
     flex-direction: column;
+    width: 335px;
    }
    .description-container {
     @media #{$mobile} {
