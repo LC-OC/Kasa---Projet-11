@@ -7,7 +7,7 @@ import Logements from "./pages/Logements";
 
 const App = () => {
   return (
-    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="a-propos" element={<About />}></Route>
