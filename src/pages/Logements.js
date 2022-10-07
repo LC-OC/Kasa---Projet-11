@@ -8,10 +8,15 @@ import Carousel from "../components/Carousel";
 import AccordionsLogement from "../components/AccordionsLogement";
 import Profil from "../components/Profil";
 import Tags from "../components/Tags";
+import Error404 from "./Error404";
 
 const Logements = () => {
   const { id } = useParams();
   const logement = logementsData.find((lgmt) => lgmt.id === id);
+
+  if (logement === undefined) {
+    return <Error404 />;
+  }
 
   return (
     <div>
